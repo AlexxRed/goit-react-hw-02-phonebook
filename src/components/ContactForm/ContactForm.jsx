@@ -2,6 +2,8 @@ import React from 'react';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { MainForm, Label, InputForm, ButtonAdd } from './ContactForm.styled';
+import PropTypes from 'prop-types';
+
 
 const initialValues = {
   name: '',
@@ -37,4 +39,8 @@ export default function ContactForm({ onSubmit }) {
       </MainForm>
     </Formik>
   );
+}
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired
 }
